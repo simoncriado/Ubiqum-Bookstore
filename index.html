@@ -12,20 +12,36 @@
 </head>
 
 <body>
-    <header class="bar">
-        <div class="header">
-            <img class="logo" src="/images/Captura de pantalla 2019-06-25 a las 12.12.42.png" alt="Logo">
-        </div>
-        <div class="searchBar">
-            <input type="text" id="myInput" onkeyup="searchBar()" placeholder=" Search...">
-        </div>
-    </header>
-    <div id="container" class="container">
+    <div id="versionVue">
+        <header class="bar">
+            <div class="header">
+                <img class="logo" src="/images/Captura de pantalla 2019-06-25 a las 12.12.42.png" alt="Logo">
+            </div>
+            <div class="searchBar">
+                <input type="text" id="myInput" onkeyup="searchBar()" placeholder=" Search...">
+            </div>
+        </header>
+        <div id="container" class="container">
+            <div v-for="book in books" class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="smallImage" :src="book.portada">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>{{book.titulo}}</h2>
+                        <p>{{book.descripcion}}</p>
+                        <a :href="book.detalle" data-fancybox>
+                            <button class="button" type="button">More Info</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+        </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/fancybox-master/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js"></script>
 </body>
 
