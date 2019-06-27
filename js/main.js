@@ -1,3 +1,5 @@
+// VUE VERSION
+
 var data;
 var books;
 
