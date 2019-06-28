@@ -1,15 +1,21 @@
 .header {
+    
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     border-style: solid;
     margin-bottom: 20px;
 }
 .logo {
     height: 200px;
 }
-.searchBar {
+/* .searchBar {
     position: absolute;
     right: 50px;
     top: 150px;
-}
+} */
 input {
     border-style: solid;
     border-color: black;
@@ -35,7 +41,6 @@ input {
     background-color: transparent;
     width: 300px;
     height: 450px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
 }
 .flip-card-inner {
@@ -62,7 +67,7 @@ input {
     background-color: rgb(160, 160, 201);
   }
   button {
-      width: 100px;
-      height: 25px;
-      font-size: 15px;
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
   }
